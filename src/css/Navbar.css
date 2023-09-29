@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 600px){
+    .Navbar {
+           width: 100%;
+       }
+   }
+
+@media screen and (max-width: 1050px){
+ .Login {
+        margin-top: 20px;
+    }
+}
+
+
+body {
+    overflow-x: hidden;
+  }
