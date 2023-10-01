@@ -1,14 +1,13 @@
 
-@media screen and (max-width: 600px){
-    .Navbar {
-           width: 100%;
-       }
-   }
 
 @media screen and (max-width: 1050px){
  .Login {
-        margin-top: 20px;
+        margin-inline-end: 20px;
     }
+}
+
+.drop .nav-link{
+    color: black;
 }
 
 

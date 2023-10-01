@@ -45,8 +45,8 @@ export default function Navbar() {
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBDropdown style={{ fontSize: '30px', fontFamily: 'initial' }}>
-                                <MDBDropdownToggle color='black' tag='a' className='nav-link' role='button'>
+                            <MDBDropdown className='drop' style={{ fontSize: '25px', fontFamily: 'inherit' }}>
+                                <MDBDropdownToggle tag='a' className='nav-link' role='button'>
                                     Product
                                 </MDBDropdownToggle>
                                 <MDBDropdownMenu>
@@ -56,7 +56,7 @@ export default function Navbar() {
                             </MDBDropdown>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink style={{ color: 'black', fontSize: '30px', fontFamily: 'initial' }} href='#'>Contact</MDBNavbarLink>
+                            <MDBNavbarLink style={{ color: 'black', fontSize: '25px', fontFamily: 'inherit' }} href='#'>Contact</MDBNavbarLink>
                         </MDBNavbarItem>
 
                     </MDBNavbarNav>

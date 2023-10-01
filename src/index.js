@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import LoginComponent from './Pages/Login';
 
 const router = createBrowserRouter([
 
@@ -15,10 +16,10 @@ const router = createBrowserRouter([
       element: <App />
     },
 
-    // {
-    //   path: "/Course",
-    //   element: <CourseComponent />,
-    // },
+     {
+       path: "/Login",
+       element: <LoginComponent />,
+     },
   // {
   //   path: '/Course/:courseId',
   //   element: <CourseDetail />

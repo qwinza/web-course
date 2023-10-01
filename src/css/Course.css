@@ -1,0 +1,10 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .cards .card {
+    flex-basis: 15em;
+    flex-grow: 1;
+  }
