@@ -1,4 +1,5 @@
 import Navbar from '../Pages/Navbar'
+import Benefit from '../Pages/Benefit'
 import Course from '../Pages/Course'
 import Footer from '../Pages/Footer'
 import landingImage from '../img/image-landing.avif'
@@ -25,8 +26,8 @@ function App() {
           <img src={landingImage} alt="landing" />
         </div>
       </div>
-      <Course />
-      <h2>Page Course</h2>
+      <Benefit />
+      {/* <Course /> */}
       <Footer />
     </>
   );
