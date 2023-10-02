@@ -8,27 +8,38 @@
      }
  }
 
- @media (max-width: 1050px){
+ @media (max-width: 600px){
      img {
       max-width: 100%;
          height: 400px;
      }
  }
 
+ 
+ @media screen and (min-width: 600px){
+  .Container{
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1050px){
   .Head{
     display: grid;
-    margin: 0;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 50px;
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .Container {
-    margin: 0;
+@media screen and (max-width: 1050px){
+  .Head .Container .item{
+    width: 400px;
     margin-bottom: 50px;
   }
 }
+
 
 .Container {
   padding: 10rem 0 ;

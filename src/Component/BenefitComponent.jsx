@@ -11,12 +11,12 @@ export default function Benefit (){
             <div className="container">
                 <div className="cards">
                     <div className="card-list">
-                        <img src={ImageCerti} alt="..." style={{width: '100px'}}/>
+                        <img src={ImageCerti} alt="..."   />
                         <h2>Sertifikat</h2>
                         <p>Bangun Portofolio mu dengan mendapatkan sertifikat bersama Estradax</p>
                     </div>
                     <div className="card-list">
-                        <img src={ImageLearn} alt="..." style={{width: '120px'}} />
+                        <img src={ImageLearn} alt="..."   />
                         <h2>Learning Path</h2>
                         <p>Arahan belajar dari Estradax untuk kamu bisa menjadi seorang Web Dev</p>
                     </div>

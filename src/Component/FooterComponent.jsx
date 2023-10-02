@@ -5,7 +5,7 @@ import '../css/Footer.css'
 export default function App() {
   return (
     <>
-
+      <div className="Footer">
         <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
           <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
             <div className='me-5 d-none d-lg-block'>
@@ -118,6 +118,7 @@ export default function App() {
             © 2021 Copyright
           </div>
         </MDBFooter>
+      </div>
     </>
   )
 }
