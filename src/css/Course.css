@@ -1,10 +1,10 @@
-.cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .cards .card {
-    flex-basis: 15em;
-    flex-grow: 1;
-  }
+.course-content {
+    margin: 0 27px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  margin: 100px 5px 100px 5px;
+}
+

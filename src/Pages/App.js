@@ -27,7 +27,7 @@ function App() {
         </div>
       </div>
       <Benefit />
-      {/* <Course /> */}
+      <Course />
       <Footer />
     </>
   );
