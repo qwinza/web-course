@@ -14,17 +14,19 @@ function App() {
     <>
       <Navbar />
       <div className='Head'>
+        <div className='border'></div>
         <div className="Container">
           <h1>Welcome To Estradax</h1>
           <h3>Upgrade Your Skill!</h3>
           <p>Kembangkan Website dengan mengikuti alur pembelajaran
             bersama kami
           </p>
-          <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/')}>Detail Course</MDBBtn>
+          <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/AllCourse')}>Detail Course</MDBBtn>
         </div>
         <div className="item">
           <img src={landingImage} alt="landing" />
         </div>
+        <div className='border2'></div>
       </div>
       <Benefit />
       <Course />

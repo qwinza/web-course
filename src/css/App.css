@@ -1,31 +1,59 @@
-.Head{
+.Head {
   display: flex;
+
 }
 
-@media screen and (max-width: 1050px){
+.border {
+  border-radius: 0% 100% 100% 0% / 70% 0% 100% 30%;
+  width: 300px;
+  height: 100px;
+  background: #ad5389;
+  background: -webkit-linear-gradient(to right,
+      #3c1053,
+      #ad5389);
+  background: linear-gradient(to right,
+      #3c1053,
+      #ad5389);
+}
+
+
+.border2 {
+  border-radius: 0% 100% 100% 100% / 100% 100% 100% 100%;
+  width: 400px;
+  height: 100px;
+  background: #ad5389;
+  background: -webkit-linear-gradient(to right,
+      #3c1053,
+      #ad5389);
+  background: linear-gradient(to right,
+      #3c1053,
+      #ad5389);
+}
+
+@media screen and (max-width: 1050px) {
   .Login {
-         margin-top: 20px;
-     }
- }
+    margin-top: 20px;
+  }
+}
 
- @media (max-width: 600px){
-     img {
-      max-width: 100%;
-         height: 400px;
-     }
- }
+@media (max-width: 600px) {
+  img {
+    max-width: 100%;
+    height: 400px;
+  }
+}
 
- 
- @media screen and (min-width: 600px){
-  .Container{
+
+@media screen and (min-width: 600px) {
+  .Container {
     margin: 0;
     align-items: center;
     justify-content: center;
   }
 }
 
-@media screen and (max-width: 1050px){
-  .Head{
+@media screen and (max-width: 1050px) {
+  .Head {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -33,8 +61,8 @@
   }
 }
 
-@media screen and (max-width: 1050px){
-  .Head .Container .item{
+@media screen and (max-width: 1050px) {
+  .Head .Container .item {
     width: 400px;
     margin-bottom: 50px;
   }
@@ -42,6 +70,6 @@
 
 
 .Container {
-  padding: 10rem 0 ;
+  padding: 10rem 0;
   margin: 0 7rem 0 4rem;
 }
