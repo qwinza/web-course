@@ -1,11 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
-import ImageFront from '../img/FrontEndImage.png'
-import ImageBack from '../img/backendImage.jpeg'
-import ImageVue from '../img/ImageVue.png'
-import ImageNext from '../img/ImageNext.png'
 import ImageReact from '../img/ImageReact.png'
-import ImageNest from '../img/ImageNest.png'
 import { MDBBtn } from "mdb-react-ui-kit";
 
 import '../css/Course.css'
