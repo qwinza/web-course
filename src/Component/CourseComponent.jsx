@@ -51,7 +51,7 @@ export default function Course() {
         <>
             <div className="fancy-border"></div>
             <div className="content">
-                <div className="course-content">
+
                     <Slider {...settings}>
                         <div className="card">
                             <img src={ImageReact} alt="..." />
@@ -85,7 +85,6 @@ export default function Course() {
                         </div>
                     </Slider >
                 </div>
-            </div >
         </>
     );
 }

@@ -22,16 +22,17 @@
       #3c1053,
       #ad5389);
   background: linear-gradient(to right,
-      #3c1053,
-      #ad5389);
+      #a600ff,
+      #5f4153);
 }
 
-.content .course-content .card img {
+.content .card img {
   margin-bottom: 50px;
 }
 
 .card {
   box-shadow: 4px 4px 8px 5px rgba(0, 0, 0, 0.2);
   padding: 50px;
+  margin:0 20px 0 20px ;
 }
 
