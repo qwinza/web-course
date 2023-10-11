@@ -1,37 +1,14 @@
-.content {
-  margin-bottom: 50px;
-  padding: 50px;
+.card-course{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 0 5rem 0;
 }
 
-@media screen and (max-width: 1050px){
-  .content .course-content .card img {
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    height: 50%
-  }
+.img-course {
+  padding: 20px;
+  margin: auto;
+  height: 10rem;
+  width: 13rem;
 }
-
-
-.fancy-border {
-  border-radius: 0% 100% 100% 0% / 0% 50% 50% 100%;
-  width: 200px;
-  height: 150px;
-  background: #ad5389;
-  background: -webkit-linear-gradient(to right,
-      #3c1053,
-      #ad5389);
-  background: linear-gradient(to right,
-      #3c1053,
-      #ad5389);
-}
-
-.content .course-content .card img {
-  margin-bottom: 50px;
-}
-
-.card {
-  box-shadow: 4px 4px 8px 5px rgba(0, 0, 0, 0.2);
-  padding: 50px;
-}
-

@@ -1,86 +1,60 @@
+
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ReactImg from '../img/ImageReact.png'
+import VueImg from '../img/ImageVue.png'
+import NextImg from '../img/ImageNext.png'
+
+import '../css/Course.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React,{useEffect} from "react";
 import { useNavigate } from 'react-router-dom';
-import Slider from "react-slick";
-import ImageReact from '../img/ImageReact.png'
-import { MDBBtn } from "mdb-react-ui-kit";
-
-import '../css/Course.css'
 
 
-export default function Course() {
-    const navigate = useNavigate()
-    var settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-    return (
-        <>
-            <div className="fancy-border"></div>
-            <div className="content">
-                <div className="course-content">
-                    <Slider {...settings}>
-                        <div className="card">
-                            <img src={ImageReact} alt="..." />
-                            <h3>Front End</h3>
-                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Free</MDBBtn>
-                        </div>
-                        <div className="card">
-                            <img src={ImageReact} alt="..." />
-                            <h3>Back End</h3>
-                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Free</MDBBtn>
-                        </div>
-                        <div className="card">
-                            <img src={ImageReact} alt="..." />
-                            <h3>React JS</h3>
-                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Free</MDBBtn>
-                        </div>
-                        <div className="card">
-                            <img src={ImageReact} alt="..." />
-                            <h3>Next JS</h3>
-                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Free</MDBBtn>
-                        </div>
-                        <div className="card">
-                            <img src={ImageReact} alt="..." />
-                            <h3>Nest JS</h3>
-                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Free</MDBBtn>
-                        </div>
-                        <div className="card">
-                            <img src={ImageReact} alt="..." />
-                            <h3>Vue JS</h3>
-                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Free</MDBBtn>
-                        </div>
-                    </Slider >
-                </div>
-            </div >
-        </>
-    );
+function BasicExample() {
+  useEffect(() => {
+        AOS.init();
+      }, [])
+  const navigate = useNavigate()
+  return (
+    <div className='card-course' data-aos="fade-down-right">
+    <Card style={{ width: '18rem' }}>
+      <Card.Img className='img-course' variant="top" src={ReactImg} />
+      <Card.Body>
+        <Card.Title>Course Name</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the Course Name and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary" onClick={() => navigate('/Detail')}>Detail</Button>
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem' }}>
+    <Card.Img className='img-course' variant="top" src={VueImg} />
+    <Card.Body>
+      <Card.Title>Course Name</Card.Title>
+      <Card.Text>
+        Some quick example text to build on the Course Name and make up the
+        bulk of the card's content.
+      </Card.Text>
+      <Button variant="primary">Detail</Button>
+    </Card.Body>
+  </Card>
+  <Card style={{ width: '18rem' }}>
+    <Card.Img className='img-course' variant="top" src={NextImg} />
+    <Card.Body>
+      <Card.Title>Course Name</Card.Title>
+      <Card.Text>
+        Some quick example text to build on the Course Name and make up the
+        bulk of the card's content.
+      </Card.Text>
+      <Button variant="primary">Detail</Button>
+    </Card.Body>
+  </Card>
+  
+  </div>
+  );
 }
+
+export default BasicExample;

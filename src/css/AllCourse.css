@@ -1,13 +1,31 @@
-.border-all {
-    border-radius: 0% 100% 51% 49% / 0% 0% 100% 100%;
-    width: 400px;
-    height: 100px;
+.input-group-course {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
     margin-bottom: 50px;
-    background: #ad5389;
-    background: -webkit-linear-gradient(to right,
-        #3c1053,
-        #ad5389);
-    background: linear-gradient(to right,
-        #826392,
-        #6d3757);
+}
+
+
+.cards-allcourse {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+
+@media (min-width: 600px) {
+    .cards-allcourse { 
+        grid-template-columns: repeat(2, 1fr); 
+        margin: auto;
+    }
+    
+  }
+
+@media (min-width: 900px) {
+    .cards-allcourse { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .cards-allcourse { grid-template-columns: repeat(4, 1fr); }
   }

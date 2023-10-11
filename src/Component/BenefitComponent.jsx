@@ -1,14 +1,20 @@
 import ImageLearn from '../img/image-path.jpg'
 import ImageCerti from '../img/image-serti.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React,{useEffect} from "react";
 
 import '../css/Benefit.css'
 
 
 
 export default function Benefit (){
+    useEffect(() => {
+        AOS.init();
+      }, [])
     return(
         <>
-            <div className="container">
+            <div className="container" data-aos="fade-down-right">
                 <div className="cards">
                     <div className="card-list">
                         <img src={ImageCerti} alt="..."   />
