@@ -20,7 +20,7 @@ function App() {
           <h1>Welcome To <span style={{color: 'blue'}}>Estradax</span>
             </h1>
           <h3>Upgrade Your Skill!</h3>
-          <p>Kembangkan Website dengan mengikuti alur pembelajaran
+          <p>Kembangkan skill dengan mengikuti alur pembelajaran
             bersama kami
           </p>
           <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/AllCourse')}>Detail Course</MDBBtn>

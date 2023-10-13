@@ -38,7 +38,7 @@ function BasicExample() {
         Some quick example text to build on the Course Name and make up the
         bulk of the card's content.
       </Card.Text>
-      <Button variant="primary">Detail</Button>
+      <Button variant="primary" onClick={() => navigate('/Detail')}>Detail</Button>
     </Card.Body>
   </Card>
   <Card style={{ width: '18rem' }}>
@@ -49,7 +49,7 @@ function BasicExample() {
         Some quick example text to build on the Course Name and make up the
         bulk of the card's content.
       </Card.Text>
-      <Button variant="primary">Detail</Button>
+      <Button variant="primary" onClick={() => navigate('/Detail')}>Detail</Button>
     </Card.Body>
   </Card>
   

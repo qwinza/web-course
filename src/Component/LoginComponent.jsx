@@ -45,8 +45,8 @@ export default function Login() {
 
                     <MDBTabsPane show={justifyActive === 'tab1'}>
                         <h2 style={{textAlign: 'center', marginBottom: '50px', marginTop: '20px'}}>Login</h2>
-                        <MDBInput wrapperClass='mb-4' placeholder='Email address' id='form1' type='email' />
-                        <MDBInput wrapperClass='mb-4' placeholder='Password' id='form2' type='password' />
+                        <MDBInput style={{borderRadius: '30px'}} wrapperClass='mb-4' placeholder='Email address' id='form1' type='email' />
+                        <MDBInput style={{borderRadius: '30px'}} wrapperClass='mb-4' placeholder='Password' id='form2' type='password' />
 
                         <div className="d-flex justify-content-between mx-4 mb-4">
                             <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
