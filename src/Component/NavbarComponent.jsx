@@ -23,7 +23,8 @@ export default function Navbar() {
     const navigate = useNavigate()
 
     return (
-        <MDBNavbar expand='lg' color='primary' bgColor='light'>
+
+        <MDBNavbar className='nav' expand='lg' color='primary' bgColor='light'>
             <MDBContainer fluid>
                 <MDBNavbarBrand style={{ color: 'black', marginRight: '5rem', fontSize: '3rem', fontFamily: "Times New Roman" }} href='/'>Est</MDBNavbarBrand>
 

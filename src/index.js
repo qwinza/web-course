@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from '../src/Pages/App';
+import App from './App';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import reportWebVitals from './reportWebVitals';
@@ -9,15 +8,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import LoginComponent from './Pages/Login';
-import AllCourse from './Pages/AllCourse';
-import DetailCourseComponent from './Pages/DetailCourse'
+import LoginComponent from './auth/LoginComponent';
+import AllCourse from './Course/AllCourseComponent';
+import DetailCourseComponent from './Course/DetailCourseComponent'
 
 const router = createBrowserRouter([
 
   {
     path: "/",
     element: <App />
+    
   },
 
   {

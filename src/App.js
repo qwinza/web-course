@@ -1,9 +1,9 @@
-import Navbar from '../Pages/Navbar'
-import Benefit from '../Pages/Benefit'
-import Course from '../Pages/Course'
-import Footer from '../Pages/Footer'
-import landingImage from '../img/image-landing.avif'
-import '../css/App.css'
+import Navbar from './Component/NavbarComponent.jsx'
+import Benefit from './Component/BenefitComponent'
+import Course from './Course/CourseComponent'
+import Footer from './Component/FooterComponent'
+import landingImage from './img/image-landing.avif'
+import './css/App.css'
                         
 
 import { useNavigate } from 'react-router-dom';

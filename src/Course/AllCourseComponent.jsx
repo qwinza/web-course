@@ -1,5 +1,5 @@
 import '../css/AllCourse.css'
-import Footer from '../Pages/Footer'
+import Footer from '../Component/FooterComponent'
 
 
 import Card from 'react-bootstrap/Card';

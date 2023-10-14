@@ -2,6 +2,11 @@
     margin-bottom: 50px;
 }
 
+@media screen and (min-widht: 600px) {
+    .container .cards {
+        height: 100px;
+    }
+}
 
 .cards {
     display: flex;
