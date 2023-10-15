@@ -8,7 +8,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import LoginComponent from './auth/LoginComponent';
+import ContactComponent from './Component/ContactComponent'
+import LoginComponent from './auth/Login';
+import Register from './auth/Register';
 import AllCourse from './Course/AllCourseComponent';
 import DetailCourseComponent from './Course/DetailCourseComponent'
 
@@ -19,10 +21,17 @@ const router = createBrowserRouter([
     element: <App />
     
   },
-
   {
     path: "/Login",
     element: <LoginComponent />,
+  },
+  {
+    path: "/Register",
+    element: <Register />,
+  },
+  {
+    path: "/Contact",
+    element: <ContactComponent />,
   },
   {
     path: "/Detail",

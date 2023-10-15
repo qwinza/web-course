@@ -57,7 +57,7 @@ export default function Navbar() {
                             </MDBDropdown>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink style={{ color: 'black', fontSize: '25px', fontFamily: 'inherit' }} href='#'>Contact</MDBNavbarLink>
+                            <MDBNavbarLink style={{ color: 'black', fontSize: '25px', fontFamily: 'inherit' }} href='/Contact'>Contact</MDBNavbarLink>
                         </MDBNavbarItem>
 
                     </MDBNavbarNav>

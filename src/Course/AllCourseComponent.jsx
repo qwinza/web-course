@@ -27,7 +27,7 @@ export default function AllCourse() {
           data-aos="fade-down-right"
           style={{marginBottom: '100px'}}
           >
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -39,7 +39,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -51,7 +51,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -63,7 +63,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -75,7 +75,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -87,7 +87,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -99,7 +99,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
@@ -111,7 +111,7 @@ export default function AllCourse() {
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
+            <Card className='card-detail' style={{ width: '18rem' }}>
                 <Card.Img className='img-course' variant="top" src={ImageReact} />
                 <Card.Body>
                     <Card.Title>Course Name</Card.Title>
