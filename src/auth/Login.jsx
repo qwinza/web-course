@@ -1,14 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
-import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
 
 
 import '../css/Login.css'
 
 
 const Login = () => {
-  const navigate = useNavigate()
     return(
         <>
     <MDBContainer fluid className="p-3 my-5 h-custom">
@@ -16,7 +14,7 @@ const Login = () => {
   <MDBRow>
 
   <MDBCol col='10' md='6'>
-    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" />
+    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample" />
   </MDBCol>
 
   <MDBCol col='4' md='6'>
