@@ -2,6 +2,11 @@
     margin-bottom: 50px;
 }
 
+@media screen and (min-widht: 600px) {
+    .container .cards {
+        height: 100px;
+    }
+}
 
 .cards {
     display: flex;
@@ -14,7 +19,7 @@
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    border-radius: 5px
+    border-radius: 30px;
 }
 
 .container .cards .card-list img {

@@ -1,20 +1,26 @@
-
-import ImageReact from '../img/ImageReact.png';
-import { Col, Container, Image, Row, ListGroup, Badge } from "react-bootstrap";
+import ReactPlayer from 'react-player';
+import React, {useRef} from 'react';
+import { Col, Container, Row, ListGroup, Badge } from "react-bootstrap";
 import '../css/DetailCourse.css'
 
-const Course = () => {
+const vidio = 'https://youtu.be/L7-u0CHm1GI?feature=shared'
 
+const Course = () => {
+	const playerRef = useRef(null)
   return (
     <Container fluid className="course-detail-container">
       <Row className="p-4">
-	<h1 className="text-black">React JS</h1>
+	<h1 className="text-black">Detail Course</h1>
       </Row>
       <Row>
-	<Col className="d-flex justify-content-center pt-4">
-	  <Image src={ImageReact} alt="" width={300} height={300} />
-	</Col>
+	  <ReactPlayer 
+	  style= {{height: '100px'}}
+	  ref={playerRef} 
+	  url={vidio} 
+	  controls={false} />
+	
 	<Col className="pt-4">
+		<h2>React JS</h2>
           <p className="text-black">
             Mengasah kemampuan untuk menjadikan kamu bisa
             <br />

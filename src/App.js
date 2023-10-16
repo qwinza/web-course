@@ -1,9 +1,10 @@
-import Navbar from '../Pages/Navbar'
-import Benefit from '../Pages/Benefit'
-import Course from '../Pages/Course'
-import Footer from '../Pages/Footer'
-import landingImage from '../img/image-landing.avif'
-import '../css/App.css'
+import Navbar from './Component/NavbarComponent.jsx'
+import Benefit from './Component/BenefitComponent'
+import Course from './Course/CourseComponent'
+import Footer from './Component/FooterComponent'
+import landingImage from './img/image-landing.avif'
+import './css/App.css'
+                        
 
 import { useNavigate } from 'react-router-dom';
 import { MDBBtn } from 'mdb-react-ui-kit';
@@ -16,9 +17,10 @@ function App() {
       <div className='Head'>
         <div className='border'></div>
         <div className="Container">
-          <h1>Welcome To Estradax</h1>
+          <h1>Welcome To <span style={{color: 'blue'}}>Estradax</span>
+            </h1>
           <h3>Upgrade Your Skill!</h3>
-          <p>Kembangkan Website dengan mengikuti alur pembelajaran
+          <p>Kembangkan skill dengan mengikuti alur pembelajaran
             bersama kami
           </p>
           <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/AllCourse')}>Detail Course</MDBBtn>
@@ -26,7 +28,6 @@ function App() {
         <div className="item">
           <img src={landingImage} alt="landing" />
         </div>
-        <div className='border2'></div>
       </div>
       <Benefit />
       <Course />
