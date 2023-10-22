@@ -39,8 +39,6 @@ const Register = () => {
 
 	localStorage.setItem('token', response.data.token);
 
-	axios.defaults.headers.common['Authorization'] = response.data.token;
-
 	navigate('/');
   }
 
