@@ -63,12 +63,8 @@ const Register = () => {
                 <MDBIcon fas icon="lock me-3" size='lg'/>
                 <MDBInput value={password} onChange={(e) => setPassword(e.target.value)} style={{borderRadius: '20px'}} placeholder='Password' id='form3' type='password'/>
               </div>
-              <div className="d-flex flex-row align-items-center mb-4">
-                <MDBIcon fas icon="key me-3" size='lg'/>
-                <MDBInput style={{borderRadius: '20px'}} placeholder='Repeat your password' id='form4' type='password'/>
-              </div>
               <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="/Login" className="link-danger">Login</a></p>
-              <MDBBtn className='mb-4' size='lg' onClick={register}>Register</MDBBtn>
+              <MDBBtn rippleDuration={0} className='mb-4' size='lg' onClick={register}>Register</MDBBtn>
             </MDBCol>
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
               <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp' fluid/>

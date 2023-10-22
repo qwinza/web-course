@@ -45,7 +45,6 @@ const Login = () => {
     <div className="divider d-flex align-items-center my-4">
         <h1>Login</h1>
     </div>
-
     <MDBInput value={email} onChange={(e) => setEmail(e.target.value)} style={{borderRadius: '20px'}} wrapperClass='mb-4' placeholder='Email address' id='formControlLg' type='email' size="lg"/>
     <MDBInput value={password} onChange={(e) => setPassword(e.target.value)} style={{borderRadius: '20px'}} wrapperClass='mb-4' placeholder='Password' id='formControlLg' type='password' size="lg"/>
 
@@ -55,7 +54,7 @@ const Login = () => {
     </div>
 
     <div className='text-center text-md-start mt-4 pt-2'>
-      <MDBBtn onClick={login} className="mb-0 px-5" size='lg'>Login</MDBBtn>
+      <MDBBtn rippleDuration={0} onClick={login} className="mb-0 px-5" size='lg'>Login</MDBBtn>
       <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="/Register" className="link-danger">Register</a></p>
     </div>
 

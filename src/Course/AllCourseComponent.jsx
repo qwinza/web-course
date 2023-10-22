@@ -1,129 +1,58 @@
-import '../css/AllCourse.css'
+import React, { useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Navbar from '../Component/NavbarComponent'
 import Footer from '../Component/FooterComponent'
 
+import data from './DataCourse'
 
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { MDBBtn } from 'mdb-react-ui-kit';
-import ImageReact from '../img/ImageReact.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import React,{useEffect} from "react";
-import { useNavigate } from 'react-router-dom';
+const AllCourseComponent = () => {
 
+    const [filter, setFilter] = useState('')
 
-export default function AllCourse() {
-    const navigate = useNavigate()
-    useEffect(() => {
-        AOS.init();
-      }, [])
+    const searchText = (event) => {
+        setFilter(event.target.value);
+    }
+
+    let dataSearch = data.filter(item => {
+        return Object.keys(item).some(key =>
+            item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
+        )
+    });
     return (
         <>
-            <form className='d-flex input-group-course'>
-                <input type='search' className='form-control' placeholder='Cari Course' aria-label='Search' />
-                <MDBBtn rippleDuration={0} color='primary'>Search</MDBBtn>
-            </form>
-         <div className="cards-allcourse"
-          data-aos="fade-down-right"
-          style={{marginBottom: '100px'}}
-          >
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
+            <Navbar />
+            <section className='py-4 container'>
+                <div className="row justify-content-center">
 
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
+                    <div className="col-12 mb5">
+                        <div className="mb-3 col-4 mx-auto text-center">
+                            <label className='form-lable h4'>Search</label>
+                            <input type="text"
+                                className="form-control"
+                                value={filter}
+                                onChange={searchText.bind(this)}
+                            />
+                        </div>
+                    </div>
 
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
+                    {dataSearch.map((item, index) => (
+                        <div className="col-11 cold-md-6 col-lg-3 mx-0 mb-4">
+                            <div className="card p-0 overflow-hidden h-100 shadow">
+                                <img src={item.img} alt="" className='card-img-top' />
+                                <div className="card-body">
+                                    <h5 className='card-title'>{item.title}</h5>
+                                    <p className='card-text'>{item.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
-
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
-
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
-
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
-
-            <Card className='card-detail' style={{ width: '18rem' }}>
-                <Card.Img className='img-course' variant="top" src={ImageReact} />
-                <Card.Body>
-                    <Card.Title>Course Name</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the Course Name and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary" onClick={() => navigate("/Detail")}>Detail</Button>
-                </Card.Body>
-            </Card>
-         </div>
-         <Footer />
+            <Footer />
         </>
     )
 }
+
+export default AllCourseComponent

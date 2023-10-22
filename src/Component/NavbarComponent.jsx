@@ -63,7 +63,7 @@ export default function Navbar() {
                     </MDBNavbarNav>
 
                     <form className='d-flex input-group '>
-                        <input type='search' className='form-control' placeholder='Cari Course' aria-label='Search' />
+                        <input type='search' className='form-control' placeholder='Apa yang ingin anda cari' aria-label='Search' />
                         <MDBBtn rippleDuration={0} style={{ marginRight: '3rem' }} color='primary'>Search</MDBBtn>
                     </form>
                     <div className='Login'>
