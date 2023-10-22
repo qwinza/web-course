@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
+  redirect,
   RouterProvider,
 } from "react-router-dom";
 import ContactComponent from './Component/ContactComponent'
@@ -13,6 +14,21 @@ import LoginComponent from './auth/Login';
 import Register from './auth/Register';
 import AllCourse from './Course/AllCourseComponent';
 import DetailCourseComponent from './Course/DetailCourseComponent'
+import axios from 'axios';
+import Profile from './profile/profile';
+
+axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+	config.headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
 
 const router = createBrowserRouter([
 
@@ -40,9 +56,23 @@ const router = createBrowserRouter([
   {
     path: "/AllCourse",
     element: <AllCourse />
+  },
+  {
+	path: "/Profile",
+	loader: async () => {
+	  let response;
+
+	  try {
+		response = await axios.get('/api/v1/profile');
+	  } catch {
+		return redirect('/Login');
+	  }
+
+	  return response.data;
+	},
+	element: <Profile /> 
   }
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
