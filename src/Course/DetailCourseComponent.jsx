@@ -18,7 +18,6 @@ const Course = () => {
 	  ref={playerRef} 
 	  url={vidio} 
 	  controls={false} />
-	
 	<Col className="pt-4">
 		<h2>React JS</h2>
           <p className="text-black">

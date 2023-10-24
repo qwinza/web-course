@@ -15,7 +15,7 @@ function App() {
     <>
       <Navbar />
       <div className='Head'>
-        <div className='border'></div>
+        <div className='border1'></div>
         <div className="Container">
           <h1>Welcome To <span style={{color: 'blue'}}>Estradax</span>
             </h1>
