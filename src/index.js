@@ -13,6 +13,7 @@ import ContactComponent from './Component/ContactComponent'
 import LoginComponent from './auth/Login';
 import Register from './auth/Register';
 import AllCourse from './Course/AllCourseComponent';
+import LandingCourse from './Course/landingCourse'
 import DetailCourseComponent from './Course/DetailCourseComponent'
 import axios from 'axios';
 import Profile from './profile/profile';
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
   {
     path: "/Contact",
     element: <ContactComponent />,
+  },
+  {
+    path: "/LandingCourse",
+    element: <LandingCourse />
+    
   },
   {
     path: "/Detail",

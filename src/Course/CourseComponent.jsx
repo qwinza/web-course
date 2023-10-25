@@ -6,6 +6,27 @@ import '../css/Course.css'
 
 
 export default function Course() {
+
+  var dataCourse = [
+    {
+      id: 1,
+      title: 'React JS',
+      desc: 'orem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus'
+    },
+    {
+      id: 2,
+      title: 'React JS',
+      desc: 'orem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus'
+    },
+    {
+      id: 3,
+      title: 'React JS',
+      desc: 'orem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus'
+    }
+
+  ]
+
+
   const navigate = useNavigate()
   var settings = {
     dots: true,
@@ -34,27 +55,17 @@ export default function Course() {
   };
   return (
     <>
-
       <div className="card-course">
         <Slider {...settings}>
-            <div className="card">
-             
-              <h3>Front End</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus</p>
-              <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Detail</MDBBtn>
-            </div>
-            <div className="card">
-              
-              <h3>Back End</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus</p>
-              <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Detail</MDBBtn>
-            </div>
-            <div className="card">
-             
-              <h3>React JS</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus</p>
-              <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Detail</MDBBtn>
-            </div>
+          {
+            dataCourse.map((item, _index) => (
+              <div className="card">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+                <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
+              </div>
+            ))
+          }
         </Slider >
       </div>
     </>

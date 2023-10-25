@@ -49,7 +49,7 @@ const AllCourseComponent = () => {
                                     <p className='card-modul'>Modul : {item.modul}</p>
                                     <h5 className='price'>Price :</h5>
                                     <p className='card-text  border rounded'>{item.price}</p>
-                                    <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/Detail')}>Detail</MDBBtn>
+                                    <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
                                 </div>
                             </div>
                         </div>
