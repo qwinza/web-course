@@ -10,14 +10,14 @@ import { useNavigate } from 'react-router-dom';
 
 const AllCourseComponent = () => {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const [filter, setFilter] = useState('')
 
     const searchText = (event) => {
         setFilter(event.target.value);
-    }
-
+    } 
+    
     let dataSearch = data.filter(item => {
         return Object.keys(item).some(key =>
             item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
@@ -48,7 +48,7 @@ const AllCourseComponent = () => {
                                     <h5 className='card-title'>{item.title}</h5>
                                     <p className='card-modul'>Modul : {item.modul}</p>
                                     <h5 className='price'>Price :</h5>
-                                    <p className='card-text  border rounded'>{item.price}</p>
+                                    <p className='card-text  border rounded w-auto'>{item.price}</p>
                                     <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
                                 </div>
                             </div>

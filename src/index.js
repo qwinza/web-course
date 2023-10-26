@@ -17,6 +17,8 @@ import LandingCourse from './Course/landingCourse'
 import DetailCourseComponent from './Course/DetailCourseComponent'
 import axios from 'axios';
 import Profile from './profile/profile';
+import ProfileSetting from './profile/profileSetting'
+import Setting from './Component/Setting'
 
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
 
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
   {
     path: "/AllCourse",
     element: <AllCourse />
+  },
+  {
+    path: "/profileSetting",
+    element: <ProfileSetting />
+  },
+  {
+    path: "/Setting",
+    element: <Setting />
   },
   {
 	path: "/Profile",

@@ -2,7 +2,7 @@ import Navbar from './Component/NavbarComponent.jsx'
 import Benefit from './Component/BenefitComponent'
 import Course from './Course/CourseComponent'
 import Footer from './Component/FooterComponent'
-import landingImage from './img/image-landing.avif'
+import landingImage from './img/landing-image.png'
 import './css/App.css'
                         
 
