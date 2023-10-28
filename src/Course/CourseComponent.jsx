@@ -4,7 +4,6 @@ import { MDBBtn } from "mdb-react-ui-kit";
 
 import '../css/Course.css'
 
-
 export default function Course() {
 
   var dataCourse = [
@@ -25,7 +24,6 @@ export default function Course() {
     }
 
   ]
-
 
   const navigate = useNavigate()
   var settings = {
@@ -59,7 +57,7 @@ export default function Course() {
         <Slider {...settings}>
           {
             dataCourse.map((item, _index) => (
-              <div className="card">
+              <div key={_index} className="card">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
                 <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>

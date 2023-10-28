@@ -55,7 +55,6 @@ const router = createBrowserRouter([
   {
     path: "/LandingCourse",
     element: <LandingCourse />
-    
   },
   {
     path: "/Detail",
