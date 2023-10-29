@@ -21,17 +21,16 @@ export default function ProfilePage() {
   const fetchUserData = () => {
     fetch("https://course-serv-api-service.onrender.com/api/v1/profile", {
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzMCJ9.wXvT0dLfQmcYr37DKSfYbR1kgLkXr4FehG_D3Ki2TXk"
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyOSJ9.Yv8oVW7Ej8SpDPa1xXxuunTTMlArmTxQMXlo7SVaoYY"
       }
-
     })
-      .then(respone => {
-        return respone.json()
+      .then(response => {
+        return response.json()
       }).then(data => {
         setUsers(data);
       })
-  }
 
+  }
   useEffect(() => {
     fetchUserData()
   }, [])
@@ -77,9 +76,9 @@ export default function ProfilePage() {
                   <MDBCol sm="3">
                     <MDBCardText>Full Name</MDBCardText>
                   </MDBCol>
-                    <MDBCol sm="9">
-                      <MDBCardText className="text-muted">{user.name}</MDBCardText>
-                    </MDBCol>
+                  <MDBCol sm="9">
+                    <MDBCardText className="text-muted">{user.name}</MDBCardText>
+                  </MDBCol>
 
                 </MDBRow>
                 <hr />

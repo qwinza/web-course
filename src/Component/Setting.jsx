@@ -1,4 +1,7 @@
- const Setting = () => (
+import React from "react"
+
+const Setting = () => (
+  <>
     <div className="container light-style flex-grow-1 container-p-y">
       <h4 className="font-weight-bold py-3 mb-4">Account settings</h4>
       <div className="card overflow-hidden">
@@ -352,7 +355,8 @@
         </button>
       </div>
     </div>
-  )
-  
+  </>
+)
 
-  export default Setting
+
+export default Setting
