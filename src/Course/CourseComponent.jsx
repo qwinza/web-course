@@ -9,17 +9,17 @@ export default function Course() {
   var dataCourse = [
     {
       id: 1,
-      title: 'React JS',
+      title: 'HTML',
       desc: 'orem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus'
     },
     {
       id: 2,
-      title: 'React JS',
+      title: 'CSS',
       desc: 'orem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus'
     },
     {
       id: 3,
-      title: 'React JS',
+      title: 'Javascript',
       desc: 'orem ipsum dolor sit amet, consectetur adipisicing elit. Iusto alias quod a sed itaque quae provident error, laborum odit dolore minus'
     }
 
@@ -57,9 +57,8 @@ export default function Course() {
         <Slider {...settings}>
           {
             dataCourse.map((item, _index) => (
-              <div key={_index} className="card">
+              <div key={_index} className="card-landing">
                 <h3>{item.title}</h3>
-                <p>{item.desc}</p>
                 <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
               </div>
             ))

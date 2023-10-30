@@ -18,11 +18,12 @@ const AllCourseComponent = () => {
 
     const fetchCourse = () => {
         fetch("https://course-serv-api-service.onrender.com/api/v1/courses")
-        .then(response => {
-            return response.json()
-        }).then(data => {
-            setCourse(data.Courses)
-        })
+            .then(response => {
+                return response.json()
+            }).then(data => {
+
+                setCourse(data.Courses)
+            })
     }
 
     useEffect(() => {
@@ -31,7 +32,7 @@ const AllCourseComponent = () => {
 
     return (
         <>
-        <Navbar />
+            <Navbar />
             <section className='py-4 mt-5 container'>
                 <div className="row justify-content-center">
                     <div className="col-12 mb5">
@@ -43,11 +44,10 @@ const AllCourseComponent = () => {
                             />
                         </div>
                     </div>
-
                     {
                         course.filter((data) => {
                             return search.toLowerCase() === ''
-                            ? data : data.Title.toLowerCase().includes(search) 
+                                ? data : data.Title.toLowerCase().includes(search)
                         }).map((data, index) => (
                             <div key={index} className="content col-11 cold-md-6 col-lg-3 mx-0 mb-4">
                                 <div className="card p-0 overflow-hidden h-100 shadow p-4">
