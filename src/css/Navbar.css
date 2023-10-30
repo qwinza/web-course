@@ -1,18 +1,45 @@
 .nav {
     box-shadow: 0 0 10px 0;
-} 
+    background-color: #0e2a47;
+}
 
-@media screen and (max-width: 1050px){
- .Login {
+@media screen and (max-width: 1050px) {
+    .Login {
         margin-inline-end: 20px;
     }
 }
 
-.drop .nav-link{
+.custom-shape-divider-top-1698678240 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1698678240 svg {
+    position: relative;
+    display: block;
+    width: calc(152% + 1.3px);
+    height: 70px;
+}
+
+.custom-shape-divider-top-1698678240 .shape-fill {
+    fill: #0e2a47;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1698678240 svg {
+        width: calc(152% + 1.3px);
+        height: 50px;
+    }
+}
+
+.drop .nav-link {
     color: black;
 }
 
-
 body {
     overflow-x: hidden;
-  }
+}
