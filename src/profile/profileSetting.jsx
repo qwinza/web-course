@@ -21,7 +21,7 @@ export default function ProfilePage() {
   const fetchUserData = () => {
     fetch("https://course-serv-api-service.onrender.com/api/v1/profile", {
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyOSJ9.Yv8oVW7Ej8SpDPa1xXxuunTTMlArmTxQMXlo7SVaoYY"
+        "Authorization": "Bearer " + localStorage.getItem('token')
       }
     })
       .then(response => {

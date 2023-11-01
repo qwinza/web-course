@@ -3,7 +3,6 @@
   background: #275e97;
 }
 
-
 @media screen and (max-width: 1050px) {
   .Login {
     margin-top: 20px;
@@ -41,6 +40,7 @@
 .Container {
   padding: 10rem 0;
   margin: 0 7rem 0 10rem;
+  color: white;
 }
 
 .custom-shape-divider-bottom-1698676676 {
