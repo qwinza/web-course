@@ -1,25 +1,47 @@
-.card-course{
-  padding: 30px;
-  margin-bottom: 50px;
+.custom-shape-divider-bottom-1698955100 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1698955100 svg {
+  display: block;
+  width: calc(166% + 1.3px);
+  height: 87px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1698955100 .shape-fill {
+  fill: #789BBE;
+}
+
+.card-course {
+  padding: 50px;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #3c1053;
+  background: linear-gradient(0deg, #789bbe 49%, #ffffff 50%);
+  height: 30rem;
 }
 
 .card-landing {
+  margin: 50px 0 0 0;
   padding: 50px;
   transition: 0.3s;
   border-radius: 30px;
-  background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww');
+  background-color: white;
+  box-shadow: 10px 10px 10px 8px #888888;
 }
 
 .card-course .card-landing h3 {
-  color: white;
+  color: black;
   margin-top: 20px;
 }
 
-.slick-slide > div {
+.slick-slide>div {
   margin: 0 10px;
-  
+
 }
 
 .slick-list {

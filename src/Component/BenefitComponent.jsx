@@ -14,6 +14,7 @@ export default function Benefit (){
       }, [])
     return(
         <>
+        <h2 className='text-center mb-5'>Benefit</h2>
             <div className="container" data-aos="fade-down-right">
                 <div className="cards">
                     <div className="card-list">

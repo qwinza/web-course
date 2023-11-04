@@ -1,6 +1,6 @@
 .Head {
   display: flex;
-  background: #275e97;
+  background-color: #275e97;
 }
 
 @media screen and (max-width: 1050px) {

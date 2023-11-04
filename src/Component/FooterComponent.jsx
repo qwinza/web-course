@@ -1,124 +1,84 @@
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import '../css/Footer.css'
+import {
+  MDBFooter,
+  MDBContainer,
+  MDBCol,
+  MDBRow,
+} from 'mdb-react-ui-kit';
 
 export default function App() {
   return (
-    <>
-      <div className="Footer">
-        <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-          <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-            <div className='me-5 d-none d-lg-block'>
-              <span>Get connected with us on social networks:</span>
-            </div>
+    <MDBFooter style={{backgroundColor: '#275e97', marginTop: '50px'}} className='text-white text-center text-md-start'>
+      <MDBContainer className='p-4'>
+        <MDBRow>
+          <MDBCol lg="6" md="12" className='mb-4 mb-md-0'>
+            <h5 className='text-uppercase'>Estradax</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias.
+              Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam,
+              est atque cumque eum delectus sint!
+            </p>
+          </MDBCol>
 
-            <div>
-              <a href='/' className='me-4 text-reset'>
-                <MDBIcon fab icon="twitter" />
-              </a>
-              <a href='/' className='me-4 text-reset'>
-                <MDBIcon fab icon="google" />
-              </a>
-              <a href='/' className='me-4 text-reset'>
-                <MDBIcon fab icon="instagram" />
-              </a>
-              <a href='/' className='me-4 text-reset'>
-                <MDBIcon fab icon="linkedin" />
-              </a>
-              <a href='/' className='me-4 text-reset'>
-                <MDBIcon fab icon="github" />
-              </a>
-            </div>
-          </section>
+          <MDBCol lg="3" md="6" className='mb-4 mb-md-0'>
+            <h5 className='text-uppercase'>Links</h5>
 
-          <section className=''>
-            <MDBContainer className='text-center text-md-start mt-5'>
-              <MDBRow className='mt-3'>
-                <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4'>
-                    <MDBIcon icon="gem" className="me-3" />
-                    Estradax
-                  </h6>
-                  <p>
-                    Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                  </p>
-                </MDBCol>
+            <ul className='list-unstyled mb-0'>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 3
+                </a>
+              </li>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 4
+                </a>
+              </li>
+            </ul>
+          </MDBCol>
 
-                <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Angular
-                    </a>
-                  </p>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      React
-                    </a>
-                  </p>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Vue
-                    </a>
-                  </p>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Laravel
-                    </a>
-                  </p>
-                </MDBCol>
+          <MDBCol lg="3" md="6" className='mb-4 mb-md-0'>
+            <h5 className='text-uppercase mb-0'>Links</h5>
 
-                <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Pricing
-                    </a>
-                  </p>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Settings
-                    </a>
-                  </p>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Orders
-                    </a>
-                  </p>
-                  <p>
-                    <a href='#!' className='text-reset'>
-                      Help
-                    </a>
-                  </p>
-                </MDBCol>
+            <ul className='list-unstyled'>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 2
+                </a>
+              </li>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 3
+                </a>
+              </li>
+              <li>
+                <a href='#!' className='text-white'>
+                  Link 4
+                </a>
+              </li>
+            </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
 
-                <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                  <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-                  <p>
-                    <MDBIcon icon="home" className="me-2" />
-                    Bandung, Jawa Barat, Indonesia
-                  </p>
-                  <p>
-                    <MDBIcon icon="envelope" className="me-3" />
-                    estradax@example.com
-                  </p>
-                  <p>
-                    <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
-                  </p>
-                  <p>
-                    <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
-                  </p>
-                </MDBCol>
-              </MDBRow>
-            </MDBContainer>
-          </section>
-
-          <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-            © 2021 Copyright
-          </div>
-        </MDBFooter>
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        © 2023 Copyright
       </div>
-    </>
-  )
+    </MDBFooter>
+  );
 }

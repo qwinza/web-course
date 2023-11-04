@@ -1,6 +1,7 @@
 import Navbar from './Component/NavbarComponent.jsx'
 import Benefit from './Component/BenefitComponent'
-import Course from './Course/CourseComponent'
+import Course from './Course/CourseComponent';
+import Testi from './Component/TestiComponent.jsx'
 import Footer from './Component/FooterComponent'
 import landingImage from './img/landing-image.png'
 import './css/App.css'
@@ -37,6 +38,7 @@ function App() {
       </div>
       <Benefit />
       <Course />
+      <Testi /> 
       <Footer />
     </>
   );
