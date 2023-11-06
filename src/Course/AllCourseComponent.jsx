@@ -21,7 +21,6 @@ const AllCourseComponent = () => {
             .then(response => {
                 return response.json()
             }).then(data => {
-
                 setCourse(data.Courses)
             })
     }

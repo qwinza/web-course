@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import imageProfile from '../img/profile-user.png'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Rating from '@mui/material/Rating';
 import { Carousel } from "react-responsive-carousel"
 
 import '../css/Testi.css'
@@ -24,6 +25,7 @@ export default class Testimonials extends Component {
                         <div className="myCarousel">
                             <h3>Shirley Fultz</h3>
                             <h4>Designer</h4>
+                            <Rating name="no-value" value={null} />
                             <p>
                                 It's freeing to be able to catch up on customized news and not be
                                 distracted by a social media element on the same site
@@ -35,6 +37,7 @@ export default class Testimonials extends Component {
                         <img src={imageProfile} alt="...." />
                         <div className="myCarousel">
                             <h3>Daniel Keystone</h3>
+                            <Rating name="no-value" value={null} />
                             <h4>Designer</h4>
                             <p>
                                 The simple and intuitive design makes it easy for me use. I highly
@@ -46,6 +49,7 @@ export default class Testimonials extends Component {
                     <div>
                         <img src={imageProfile} alt="...." />
                         <div className="myCarousel">
+                            <Rating name="no-value" value={null} />
                             <h3>Theo Sorel</h3>
                             <h4>Designer</h4>
                             <p>
