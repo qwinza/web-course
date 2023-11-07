@@ -10,7 +10,7 @@ export default class Testimonials extends Component {
     render() {
         return (
             <>
-                <h2 className="text-center mb-5">Testimoni</h2>
+                <h2 className="text-center mb-5 mt-5">Testimoni</h2>
                 <Carousel
                     showArrows={false}
                     infiniteLoop={true}

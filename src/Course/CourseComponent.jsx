@@ -7,7 +7,7 @@ import '../css/Course.css'
 
 export default function Course() {
 
-  const [recomended, setRecomended] = useState([])
+  const [recomended, setRecomended] = useState()
 
 
   const fetchRecommended = () => {
@@ -15,8 +15,7 @@ export default function Course() {
       .then(response => {
         return response.json()
       }).then(data => {
-        console.log(data)
-        setRecomended(data.courses)
+        setRecomended(data)
       })
   }
 
@@ -59,14 +58,15 @@ export default function Course() {
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
         </svg>
       </div>
-      <div className="card-course">
+      <div className="card-course mb-5">
         <h2 className='text-center mb-4'>Basic To Learn</h2>
         <Slider {...settings}>
           {
-            recomended.map((item, index) => (
+            recomended?.courses.map((item, index) => (
               <div key={index} className="card-landing color-black">
-                <h3>{item.Title}</h3>
-                <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
+                <h3>{recomended.courses[index].Title}</h3>
+                <img style={{width: '200px', height: '120px'}} src={recomended.images[index].ImageURL} alt="..." />
+                <MDBBtn className='mt-2' rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
               </div>
             ))
           }
