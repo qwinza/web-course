@@ -1,7 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MDBBtn } from "mdb-react-ui-kit";
-import ImgReact from '../img/ImageReact.png'
+import {
+    CCard,
+    CRow,
+    CCardImage,
+    CCardTitle,
+    CCardText,
+    CAccordion,
+    CCol,
+    CCardFooter,
+    CCardBody,
+    CAccordionItem,
+    CAccordionHeader,
+    CAccordionBody
+} from '@coreui/react';
+import ReactImg from '../img/img-react.png'
 
 import Navbar from '../Component/NavbarComponent'
 import Footer from '../Component/FooterComponent'
@@ -32,9 +46,9 @@ const AllCourseComponent = () => {
     return (
         <>
             <Navbar />
-            <section className='py-4 mt-5 container'>
-                <div className="row justify-content-center">
-                    <div className="col-12 mb5">
+            <section className=' mt-5 container'>
+                <div className="justify-content-center">
+                    <div className="mb-5">
                         <div className="mb-3 col-4 mx-auto text-center">
                             <label className='form-lable h4'>Search</label>
                             <input type="text"
@@ -43,26 +57,40 @@ const AllCourseComponent = () => {
                             />
                         </div>
                     </div>
-                    {
-                        course.filter((data) => {
-                            return search.toLowerCase() === ''
-                                ? data : data.Title.toLowerCase().includes(search)
-                        }).map((data, index) => (
-                            <div key={index} className="content col-11 cold-md-6 col-lg-3 mx-0 mb-4">
-                                <div className="card p-0 overflow-hidden h-100 shadow p-4">
-                                    <img src={ImgReact} alt="" className='card-img-top h-50' />
-                                    <div className="card-body">
-                                        <h5 className='card-title'>{data.Title}</h5>
-                                        <p className='card-modul'>Modul : 10</p>
-                                        <h5 className='price'>Price :</h5>
-                                        <p className='card-text  border rounded w-auto'>{data.Price}</p>
-                                        <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
+                    <div className="allcourse-content">
+                        <CRow xs={{ cols: 1 }} md={{ cols: 3 }} className='g-4'>
+                            {
+                                course.filter((data) => {
+                                    return search.toLowerCase() === ''
+                                        ? data : data.Title.toLowerCase().includes(search)
+                                }).map((data, index) => (
 
+                                    <CCol key={index}>
+                                        <CCard className="h-100">
+                                            <CCardImage orientation="top" src={ReactImg} />
+                                            <CCardBody>
+                                                <CCardTitle>{data.Title}</CCardTitle>
+                                                <CCardText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, tenetur.</CCardText>
+                                            </CCardBody>
+                                            <CCardFooter>
+                                                <CAccordion flush>
+                                                    <CAccordionItem>
+                                                        <CAccordionHeader>Detail</CAccordionHeader>
+                                                        <CAccordionBody>
+                                                            <p className='card-modul'>Modul : 10</p>
+                                                            <h5 className='price'>Price :</h5>
+                                                            <p className='card-text  border rounded w-auto'>{data.Price}</p>
+                                                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
+                                                        </CAccordionBody>
+                                                    </CAccordionItem>
+                                                </CAccordion>
+                                            </CCardFooter>
+                                        </CCard>
+                                    </CCol>
+                                ))
+                            }
+                        </CRow>
+                    </div>
                 </div>
             </section>
 

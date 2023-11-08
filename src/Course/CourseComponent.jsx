@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
-import { MDBBtn } from "mdb-react-ui-kit";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ReactImg from '../img/img-react.png'
+import {
+  CCard,
+  CCardImage,
+  CCardTitle,
+  CCardText,
+  CAccordion,
+  CRow,
+  CCol,
+  CCardFooter,
+  CCardBody,
+  CAccordionItem,
+  CAccordionHeader,
+  CAccordionBody
+} from '@coreui/react';
 
 import '../css/Course.css'
 
 export default function Course() {
 
   const [recomended, setRecomended] = useState()
-
-
+  
   const fetchRecommended = () => {
     fetch("https://course-serv-api-service.onrender.com/api/v1/recommended")
       .then(response => {
         return response.json()
       }).then(data => {
+        console.log(data)
         setRecomended(data)
       })
   }
@@ -23,7 +38,11 @@ export default function Course() {
     fetchRecommended()
   }, [])
 
-  const navigate = useNavigate()
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
   var settings = {
     dots: true,
     infinite: false,
@@ -59,19 +78,37 @@ export default function Course() {
         </svg>
       </div>
       <div className="card-course mb-5">
-        <h2 className='text-center mb-4'>Basic To Learn</h2>
+        <h2 className='title-course mb-4'>Basic To Learn</h2>
         <Slider {...settings}>
           {
             recomended?.courses.map((item, index) => (
-              <div key={index} className="card-landing color-black">
-                <h3>{recomended.courses[index].Title}</h3>
-                <img style={{width: '200px', height: '120px'}} src={recomended.images[index].ImageURL} alt="..." />
-                <MDBBtn className='mt-2' rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
-              </div>
+              <CRow>
+                <CCol xs>
+                  <CCard className="h-100 g-4">
+                    <CCardImage orientation="top" src={ReactImg} />
+                    <CCardBody>
+                      <CCardTitle>{recomended.courses[index].Title}</CCardTitle>
+                      <CCardText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, tenetur.</CCardText>
+                    </CCardBody>
+                    <CCardFooter>
+                      <CAccordion flush>
+                        <CAccordionItem itemKey={1}>
+                          <CAccordionHeader>Detail</CAccordionHeader>
+                          <CAccordionBody>
+                            {recomended.courses[index].Description}
+                          </CAccordionBody>
+                        </CAccordionItem>
+                      </CAccordion>
+                    </CCardFooter>
+                  </CCard>
+                </CCol>
+              </CRow>
             ))
           }
         </Slider >
       </div>
+
+
     </>
   );
 }

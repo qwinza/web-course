@@ -21,22 +21,14 @@
   padding: 50px;
   margin-bottom: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: linear-gradient(0deg, #789bbe 49%, #ffffff 50%);
-  height: 30rem;
+  background: linear-gradient(0deg, #3e6994 49%, #ffffff 50%);
+  height: 100vh;
 }
 
-.card-landing {
-  margin: 50px 0 0 0;
-  padding: 50px;
-  transition: 0.3s;
-  border-radius: 30px;
-  background-color: white;
-  box-shadow: 10px 10px 10px 8px #888888;
-}
-
-.card-course .card-landing h3 {
-  color: black;
-  margin-top: 20px;
+.card-course .title-course {
+  border-bottom: 4px solid black;
+  width: 20%;
+  line-height: 5rem;
 }
 
 .slick-slide>div {

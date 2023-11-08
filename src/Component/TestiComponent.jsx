@@ -1,65 +1,168 @@
-import React, { Component } from "react";
-import imageProfile from '../img/profile-user.png'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Rating from '@mui/material/Rating';
-import { Carousel } from "react-responsive-carousel"
+import React from "react";
+import {
+    MDBCard,
+    MDBCardBody,
+    MDBCol,
+    MDBContainer,
+    MDBIcon,
+    MDBRow,
+    MDBTypography,
+} from "mdb-react-ui-kit";
 
-import '../css/Testi.css'
+export default function App() {
+    return (
+        <MDBContainer
+            fluid
+            className="p-5"
+            style={{ backgroundColor: "#f3f2f2", color: "#000" }}
+        >
+            <MDBRow className="d-flex justify-content-center">
+                <MDBCol md="10" xl="8" className="text-center">
+                    <h3 className="fw-bold mb-4">What Our Client Say</h3>
+                    <p className="mb-4 pb-2 mb-md-5 pb-md-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
+                        error amet numquam iure provident voluptate esse quasi, veritatis
+                        totam voluptas nostrum quisquam eum porro a pariatur veniam.
+                    </p>
+                </MDBCol>
+            </MDBRow>
+            <MDBRow className="text-center">
+                <MDBCol md="4" className="mb-4 mb-md-0">
+                    <MDBCard>
+                        <MDBCardBody className="py-4 mt-2">
+                            <div className="d-flex justify-content-center mb-4">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
+                                    className="rounded-circle shadow-1-strong"
+                                    width="100"
+                                    height="100"
+                                    alt="..."
+                                />
 
-export default class Testimonials extends Component {
-    render() {
-        return (
-            <>
-                <h2 className="text-center mb-5 mt-5">Testimoni</h2>
-                <Carousel
-                    showArrows={false}
-                    infiniteLoop={true}
-                    showThumbs={false}
-                    showStatus={false}
-                    autoPlay={true}
-                    interval={6100}
-                    className="mt-5"
-                >
-                    <div>
-                        <img src={imageProfile} alt="...." />
-                        <div className="myCarousel">
-                            <h3>Shirley Fultz</h3>
-                            <h4>Designer</h4>
-                            <Rating name="no-value" value={null} />
-                            <p>
-                                It's freeing to be able to catch up on customized news and not be
-                                distracted by a social media element on the same site
+                            </div>
+                            <h5 className="font-weight-bold">Teresa May</h5>
+                            <h6 className="font-weight-bold my-3">Founder at ET Company</h6>
+                            <MDBTypography
+                                listUnStyled
+                                className="d-flex justify-content-center"
+                            >
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star-half-alt" size="sm" color="info" />
+                                </li>
+                            </MDBTypography>
+                            <p className="mb-2">
+                                <MDBIcon fas icon="quote-left" className="pe-2" />
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                                eos id officiis hic tenetur quae quaerat ad velit ab hic
+                                tenetur.
                             </p>
-                        </div>
-                    </div>
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBCol>
+                <MDBCol md="4" className="mb-4 mb-md-0">
+                    <MDBCard>
+                        <MDBCardBody className="py-4 mt-2">
+                            <div className="d-flex justify-content-center mb-4">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp"
+                                    className="rounded-circle shadow-1-strong"
+                                    width="100"
+                                    height="100"
+                                    alt="..."
+                                />
 
-                    <div>
-                        <img src={imageProfile} alt="...." />
-                        <div className="myCarousel">
-                            <h3>Daniel Keystone</h3>
-                            <Rating name="no-value" value={null} />
-                            <h4>Designer</h4>
-                            <p>
-                                The simple and intuitive design makes it easy for me use. I highly
-                                recommend Fetch to my peers.
+                            </div>
+                            <h5 className="font-weight-bold">Maggie McLoan</h5>
+                            <h6 className="font-weight-bold my-3">
+                                Photographer at Studio LA
+                            </h6>
+                            <MDBTypography
+                                listUnStyled
+                                className="d-flex justify-content-center"
+                            >
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                            </MDBTypography>
+                            <p className="mb-2">
+                                <MDBIcon fas icon="quote-left" className="pe-2" />
+                                Autem, totam debitis suscipit saepe sapiente magnam officiis
+                                quaerat necessitatibus odio assumenda perferendis labore
+                                laboriosam.
                             </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <img src={imageProfile} alt="...." />
-                        <div className="myCarousel">
-                            <Rating name="no-value" value={null} />
-                            <h3>Theo Sorel</h3>
-                            <h4>Designer</h4>
-                            <p>
-                                I enjoy catching up with Fetch on my laptop, or on my phone when
-                                I'm on the go!
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBCol>
+                <MDBCol md="4" className="mb-4 mb-md-0">
+                    <MDBCard>
+                        <MDBCardBody className="py-4 mt-2">
+                            <div className="d-flex justify-content-center mb-4">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp"
+                                    className="rounded-circle shadow-1-strong"
+                                    width="100"
+                                    height="100"
+                                    alt="..."
+                                />
+                            </div>
+                            <h5 className="font-weight-bold">Alexa Horwitz</h5>
+                            <h6 className="font-weight-bold my-3">
+                                Front-end Developer in NY
+                            </h6>
+                            <MDBTypography
+                                listUnStyled
+                                className="d-flex justify-content-center"
+                            >
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon fas icon="star" size="sm" color="info" />
+                                </li>
+                                <li>
+                                    <MDBIcon far icon="star" size="sm" color="info" />
+                                </li>
+                            </MDBTypography>
+                            <p className="mb-2">
+                                <MDBIcon fas icon="quote-left" className="pe-2" />
+                                Cras sit amet nibh libero, in gravida nulla metus scelerisque
+                                ante sollicitudin commodo cras purus odio, vestibulum in tempus
+                                viverra turpis.
                             </p>
-                        </div>
-                    </div>
-                </Carousel>
-            </>
-        );
-    }
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBCol>
+            </MDBRow>
+        </MDBContainer>
+    );
 }
