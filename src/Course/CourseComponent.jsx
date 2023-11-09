@@ -23,13 +23,12 @@ import '../css/Course.css'
 export default function Course() {
 
   const [recomended, setRecomended] = useState()
-  
-  const fetchRecommended = () => {
+
+  const fetchRecommended = async () => {
     fetch("https://course-serv-api-service.onrender.com/api/v1/recommended")
       .then(response => {
         return response.json()
       }).then(data => {
-        console.log(data)
         setRecomended(data)
       })
   }
@@ -78,11 +77,11 @@ export default function Course() {
         </svg>
       </div>
       <div className="card-course mb-5">
-        <h2 className='title-course mb-4'>Basic To Learn</h2>
+        <h2 className='title-course mb-4' data-aos="fade-down">Basic To Learn</h2>
         <Slider {...settings}>
           {
             recomended?.courses.map((item, index) => (
-              <CRow>
+              <CRow key={index}>
                 <CCol xs>
                   <CCard className="h-100 g-4">
                     <CCardImage orientation="top" src={ReactImg} />
