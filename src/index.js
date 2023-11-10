@@ -13,7 +13,8 @@ import ContactComponent from './Component/ContactComponent'
 import LoginComponent from './auth/Login';
 import Register from './auth/Register';
 import AllCourse from './Course/AllCourseComponent';
-import LandingCourse from './Course/landingCourse'
+import LandingCourse from './Course/landingCourse';
+import ForumComponent from './Component/ForumComponent'
 import DetailCourseComponent from './Course/DetailCourseComponent'
 import axios from 'axios';
 import Profile from './profile/profile';
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/LandingCourse",
     element: <LandingCourse />
+  },
+  {
+    path: "/Forum",
+    element: <ForumComponent />
   },
   {
     path: "/Detail",

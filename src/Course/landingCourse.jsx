@@ -21,7 +21,6 @@ import {
     Typography
 } from '@mui/material';
 
-
 import {
     CBadge,
     CProgress
@@ -31,12 +30,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import '../css/landingCourse.css'
 
-export default function landingCourse() {
+const landingCourse = () => {
+
     const steps = [
         'CSS',
         'Javascript',
         'Create Website',
     ];
+    
     return (
         <>
             <MDBNavbar className='nav-landing'>
@@ -82,7 +83,7 @@ export default function landingCourse() {
                         <MDBCardTitle>Access :</MDBCardTitle>
                         <CBadge color="success">Success</CBadge>
                     </MDBCardBody>
-                    <MDBBtn>Learn</MDBBtn>
+                    <MDBBtn rippleDuration={false}>Learn</MDBBtn>
                 </MDBCard>
             </div>
             <div className='p-4'>
@@ -92,7 +93,7 @@ export default function landingCourse() {
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
-                        <Typography>Mareri yang akan dipelajari</Typography>
+                        <Typography>Materi yang akan dipelajari</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
@@ -107,7 +108,7 @@ export default function landingCourse() {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography>Mareri yang akan dipelajari</Typography>
+                        <Typography>Materi yang akan dipelajari</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
@@ -120,3 +121,5 @@ export default function landingCourse() {
         </>
     );
 }
+
+export default landingCourse
