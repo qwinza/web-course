@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MDBBtn } from "mdb-react-ui-kit";
+import axios from 'axios';
 import {
     CCard,
     CRow,
@@ -24,23 +25,26 @@ import { useNavigate } from 'react-router-dom';
 
 const AllCourseComponent = () => {
 
+    const baseURL = "https://course-serv-api-service.onrender.com/api/v1/courses";
+
     const [course, setCourse] = useState([])
     const navigate = useNavigate();
 
     const [search, setSearch] = useState('')
-    console.log(search)
 
-    const fetchCourse = () => {
-        fetch("https://course-serv-api-service.onrender.com/api/v1/courses")
-            .then(response => {
-                return response.json()
-            }).then(data => {
-                setCourse(data.Courses)
-            })
+    const getData = async () => {
+        let response;
+        try{
+            response = await axios.get(baseURL);
+            setCourse(response.data.Courses)
+        }catch{
+            alert("No data")
+            return;
+        }
     }
 
-    useEffect(() => {
-        fetchCourse()
+   useEffect(() => {
+        getData()
     }, [])
 
     return (
@@ -60,9 +64,9 @@ const AllCourseComponent = () => {
                     <div className="allcourse-content">
                         <CRow xs={{ cols: 1 }} md={{ cols: 3 }} className='g-4'>
                             {
-                                course.filter((data) => {
+                                course?.filter((course) => {
                                     return search.toLowerCase() === ''
-                                        ? data : data.Title.toLowerCase().includes(search)
+                                        ? course : course.Title.toLowerCase().includes(search)
                                 }).map((data, index) => (
 
                                     <CCol key={index}>

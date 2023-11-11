@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
     MDBContainer,
     MDBNavbar,
@@ -30,7 +31,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import '../css/landingCourse.css'
 
-const landingCourse = () => {
+const LandingCourse = () => {
+
+    const navigate = useNavigate();
 
     const steps = [
         'CSS',
@@ -83,7 +86,7 @@ const landingCourse = () => {
                         <MDBCardTitle>Access :</MDBCardTitle>
                         <CBadge color="success">Success</CBadge>
                     </MDBCardBody>
-                    <MDBBtn rippleDuration={false}>Learn</MDBBtn>
+                    <MDBBtn rippleDuration={false} onClick={() => navigate('/Detail')}>Learn</MDBBtn>
                 </MDBCard>
             </div>
             <div className='p-4'>
@@ -122,4 +125,4 @@ const landingCourse = () => {
     );
 }
 
-export default landingCourse
+export default LandingCourse

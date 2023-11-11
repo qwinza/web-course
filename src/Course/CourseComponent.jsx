@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ReactImg from '../img/img-react.png'
+import axios from 'axios';
 import {
   CCard,
   CCardImage,
@@ -22,15 +23,19 @@ import '../css/Course.css'
 
 export default function Course() {
 
+  const recommendURL = "https://course-serv-api-service.onrender.com/api/v1/recommended";
+
   const [recomended, setRecomended] = useState()
 
   const fetchRecommended = async () => {
-    fetch("https://course-serv-api-service.onrender.com/api/v1/recommended")
-      .then(response => {
-        return response.json()
-      }).then(data => {
-        setRecomended(data)
-      })
+    let response;
+    try{
+      response = await axios.get(recommendURL);
+      console.log(response)
+      setRecomended(response.data)
+    }catch{
+      console.log("Gaada bang")
+    }
   }
 
   useEffect(() => {
