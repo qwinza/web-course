@@ -63,7 +63,7 @@ const Register = () => {
               <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='I agree all statements in Terms of service' />
             </div>
 
-            <MDBBtn rippleDuration={0} className='mb-4' size='lg' onClick={register}>
+            <MDBBtn rippleDuration={0} className='mb-4' size='lg w-100' onClick={register}>
               {
                 loading ? (
                   <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

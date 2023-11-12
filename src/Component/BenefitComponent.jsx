@@ -6,8 +6,6 @@ import React, { useEffect } from "react";
 
 import '../css/Benefit.css'
 
-
-
 export default function Benefit() {
     useEffect(() => {
         AOS.init();

@@ -7,15 +7,14 @@ import {
     CRow,
     CCardImage,
     CCardTitle,
-    CCardText,
-    CAccordion,
     CCol,
-    CCardFooter,
     CCardBody,
-    CAccordionItem,
-    CAccordionHeader,
-    CAccordionBody
+    CListGroupItem,
+    CListGroup
 } from '@coreui/react';
+import {
+    CBadge,
+} from '@coreui/react'
 import ReactImg from '../img/img-react.png'
 
 import Navbar from '../Component/NavbarComponent'
@@ -34,16 +33,16 @@ const AllCourseComponent = () => {
 
     const getData = async () => {
         let response;
-        try{
+        try {
             response = await axios.get(baseURL);
             setCourse(response.data.Courses)
-        }catch{
+        } catch {
             alert("No data")
             return;
         }
     }
 
-   useEffect(() => {
+    useEffect(() => {
         getData()
     }, [])
 
@@ -74,21 +73,18 @@ const AllCourseComponent = () => {
                                             <CCardImage orientation="top" src={ReactImg} />
                                             <CCardBody>
                                                 <CCardTitle>{data.Title}</CCardTitle>
-                                                <CCardText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, tenetur.</CCardText>
+                                                <CListGroup flush>
+                                                    <CListGroupItem>Modul :  10</CListGroupItem>
+                                                    <CListGroupItem>
+                                                    <CBadge color="danger">Locked</CBadge>
+                                                    </CListGroupItem>
+                                                    <CListGroupItem>Price : {data.Price}</CListGroupItem>
+                                                    <MDBBtn className='mt-3 w-100'
+                                                    rippleDuration={false}
+                                                    onClick={() => navigate('/landingCourse')}>BUY</MDBBtn>
+                                                </CListGroup>
                                             </CCardBody>
-                                            <CCardFooter>
-                                                <CAccordion flush>
-                                                    <CAccordionItem>
-                                                        <CAccordionHeader>Detail</CAccordionHeader>
-                                                        <CAccordionBody>
-                                                            <p className='card-modul'>Modul : 10</p>
-                                                            <h5 className='price'>Price :</h5>
-                                                            <p className='card-text  border rounded w-auto'>{data.Price}</p>
-                                                            <MDBBtn rippleDuration={0} color='primary' onClick={() => navigate('/landingCourse')}>Detail</MDBBtn>
-                                                        </CAccordionBody>
-                                                    </CAccordionItem>
-                                                </CAccordion>
-                                            </CCardFooter>
+
                                         </CCard>
                                     </CCol>
                                 ))
