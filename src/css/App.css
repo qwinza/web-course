@@ -1,6 +1,5 @@
 .Head {
   display: flex;
-  background-color: #275e97;
 }
 
 @media screen and (max-width: 1050px) {
@@ -33,24 +32,6 @@
 .Container {
   padding: 0 7rem 10rem;
   margin: 10rem 0 0 0;
-  color: white;
+  color: black;
 }
 
-.custom-shape-divider-bottom-1698676676 {
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(360deg);
-}
-
-.custom-shape-divider-bottom-1698676676 svg {
-  position: relative;
-  display: block;
-  width: calc(152% + 1.3px);
-  height: 204px;
-}
-
-.custom-shape-divider-bottom-1698676676 .shape-fill {
-  fill: #275E97;
-}

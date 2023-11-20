@@ -54,7 +54,7 @@ export default function Navbar() {
             <div className="head-nav sticky-top">
                 <MDBNavbar className='nav' expand='lg' color='primary'>
                     <MDBContainer fluid>
-                        <MDBNavbarBrand style={{ color: 'white', marginRight: '5rem', fontSize: '3rem', fontFamily: "Times New Roman" }} href='/'>Est</MDBNavbarBrand>
+                        <MDBNavbarBrand style={{ marginRight: '5rem', fontSize: '3rem', fontFamily: "Times New Roman" }} href='/'>Est</MDBNavbarBrand>
 
                         <MDBNavbarToggler
                             className='toggler'
@@ -70,21 +70,20 @@ export default function Navbar() {
                             <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                                 <MDBNavbarItem>
                                     <MDBNavbarLink active aria-current='page' href='/'>
-
                                     </MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink style={{ color: 'white', fontSize: '25px', fontFamily: 'inherit' }} href='/Contact'>Program</MDBNavbarLink>
+                                    <MDBNavbarLink style={{ fontSize: '20px', fontFamily: 'inherit' }} href='/Contact'>Program</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink style={{ color: 'white', fontSize: '25px', fontFamily: 'inherit' }} href='/Contact'>Contact</MDBNavbarLink>
+                                    <MDBNavbarLink style={{ fontSize: '20px', fontFamily: 'inherit' }} href='/Contact'>Contact</MDBNavbarLink>
                                 </MDBNavbarItem>
 
                             </MDBNavbarNav>
 
-                            <form className='d-flex input-group '>
+                            <form className='d-flex input-group w-50 '>
                                 <input type='search' className='form-control' placeholder='Apa yang ingin anda cari' aria-label='Search' />
-                                <MDBBtn rippleDuration={0} style={{ marginRight: '3rem' }} color='primary'>Search</MDBBtn>
+                                <MDBBtn rippleDuration={0} style={{ marginRight: '3rem', }} color='primary'>Search</MDBBtn>
                             </form>
                             {
                                 IsLoggedIn ? (
