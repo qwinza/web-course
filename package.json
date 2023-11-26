@@ -35,7 +35,9 @@
     "redux": "^4.2.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.11",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zukeeper": "^1.0.2",
+    "zustand": "^4.4.6"
   },
   "scripts": {
     "start": "react-scripts start",

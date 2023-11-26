@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
 function App() {
-  const navigate = useNavigate()    
+  const navigate = useNavigate()
   return (
     <>
       <Navbar />
@@ -29,11 +29,12 @@ function App() {
           <img src={landingGif} alt="landing" />
         </div>
       </div>
-
-      <Benefit />
-      <Course />
-      <Testi /> 
-      <Footer />
+      <div className='content'>
+        <Benefit />
+        <Course />
+        <Testi />
+        <Footer />
+      </div>
     </>
   );
 }

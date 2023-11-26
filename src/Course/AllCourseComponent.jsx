@@ -34,7 +34,7 @@ const AllCourseComponent = () => {
       response = await axios.get(baseURL);
       setCourse(response.data.Courses);
     } catch {
-      alert("No data");
+      console.log("No data");
       return;
     }
   };
