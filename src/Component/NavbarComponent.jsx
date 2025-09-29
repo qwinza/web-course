@@ -72,13 +72,15 @@ export default function Navbar() {
                                     <MDBNavbarLink active aria-current='page' href='/'>
                                     </MDBNavbarLink>
                                 </MDBNavbarItem>
+                                 <MDBNavbarItem>
+                                    <MDBNavbarLink style={{ fontSize: '20px', fontFamily: 'inherit' }} href='/'>Home</MDBNavbarLink>
+                                </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink style={{ fontSize: '20px', fontFamily: 'inherit' }} href='/Contact'>Program</MDBNavbarLink>
+                                    <MDBNavbarLink style={{ fontSize: '20px', fontFamily: 'inherit' }} href='/Contact'>Course</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
                                     <MDBNavbarLink style={{ fontSize: '20px', fontFamily: 'inherit' }} href='/Contact'>Contact</MDBNavbarLink>
                                 </MDBNavbarItem>
-
                             </MDBNavbarNav>
 
                             <form className='d-flex input-group w-50 '>
